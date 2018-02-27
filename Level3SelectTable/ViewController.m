@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"三层TableView";
     _rootTitles = [[NSMutableArray alloc] init];
     _subRootTitles = [[NSMutableArray alloc] init];
     _datas = [[NSMutableArray alloc] init];
