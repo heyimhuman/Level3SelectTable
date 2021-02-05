@@ -168,11 +168,15 @@
     return 0;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return .1f;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (self.MTVdelegate && [self.MTVdelegate respondsToSelector:@selector(heightForRoot:)]) {
         return [self.MTVdelegate heightForRoot:section];
     }
-    return 0;
+    return .1f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -244,10 +248,6 @@
                 [self.moveArr addObject:[NSIndexPath indexPathForRow:i inSection:currentIndex.section]];//need reload nodes
         }
     }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 1;
 }
 
 - (NSInteger)getRowInSection:(NSIndexPath *)indexPath {
